@@ -1,6 +1,6 @@
 <h1>Listado de Informes</h1>
 
-<table>
+<table *ngIf="informes.length > 0">
   <tr>
     <th>ID</th>
     <th>Fecha</th>
@@ -16,3 +16,5 @@
     <td>{{ informe.modeloId }}</td>
   </tr>
 </table>
+
+<p *ngIf="informes.length === 0">No hay informes disponibles.</p>
