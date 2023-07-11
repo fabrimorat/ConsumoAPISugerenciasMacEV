@@ -1,0 +1,10 @@
+<div *ngIf="informes.length > 0">
+    <h2>Informes:</h2>
+    <ul>
+      <li *ngFor="let informe of informes">{{ informe.resultado }}</li>
+    </ul>
+  </div>
+  <div *ngIf="informes.length === 0">
+    <p>No hay informes disponibles.</p>
+  </div>
+  
