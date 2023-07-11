@@ -1,10 +1,18 @@
-<div *ngIf="informes.length > 0">
-    <h2>Informes:</h2>
-    <ul>
-      <li *ngFor="let informe of informes">{{ informe.resultado }}</li>
-    </ul>
-  </div>
-  <div *ngIf="informes.length === 0">
-    <p>No hay informes disponibles.</p>
-  </div>
-  
+<h1>Listado de Informes</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Fecha</th>
+    <th>Resultado</th>
+    <th>Detalles</th>
+    <th>Modelo ID</th>
+  </tr>
+  <tr *ngFor="let informe of informes">
+    <td>{{ informe.informeId }}</td>
+    <td>{{ informe.fecha }}</td>
+    <td>{{ informe.resultado }}</td>
+    <td>{{ informe.detalles }}</td>
+    <td>{{ informe.modeloId }}</td>
+  </tr>
+</table>
